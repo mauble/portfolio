@@ -1,8 +1,11 @@
+@reference "../../styles.css";
+
 @media (max-width: 1000px) {
   section {
     @apply my-40 flex;
   }
 }
+
 @media (min-width: 1000px) {
   section {
     @apply flex min-h-screen items-center;

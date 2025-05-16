@@ -1,3 +1,5 @@
+@reference "../../styles.css";
+
 .my-contact-text-color {
   @apply text-black;
 }

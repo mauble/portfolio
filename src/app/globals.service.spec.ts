@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { GlobalsService } from './globals.service';
+import { GlobalsService } from "./globals.service";
 
-describe('GlobalsService', () => {
+describe("GlobalsService", () => {
   let service: GlobalsService;
 
   beforeEach(() => {
@@ -10,7 +10,7 @@ describe('GlobalsService', () => {
     service = TestBed.inject(GlobalsService);
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(service).toBeTruthy();
   });
 });

@@ -1,6 +1,9 @@
+@reference "../../styles.css";
+
 .my-navbar-color {
   @apply bg-black/[.2];
 }
+
 .my-navbar-text {
-  @apply my-on-hover-opacity text-white;
+  @apply text-white;
 }

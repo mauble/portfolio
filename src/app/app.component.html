@@ -13,10 +13,13 @@
           <li class="text-sm">Thanks for visiting 👋</li>
         </ul>
         <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
-          <a [href]="'mailto:' + globals.emailAddress" class="my-icon">
+          <a
+            [href]="'mailto:' + globals.emailAddress"
+            class="my-hover-opacity my-animate"
+          >
             <!-- <font-awesome-icon :icon="['fas', 'envelope']" size="xl" /> -->
           </a>
-          <a [href]="globals.githubUrl" class="my-icon">
+          <a [href]="globals.githubUrl" class="my-hover-opacity my-animate">
             <!-- <font-awesome-icon :icon="['fab', 'github']" size="xl" /> -->
           </a>
         </ul>

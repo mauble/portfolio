@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .my-animate {
+    @apply transition duration-150 ease-in-out;
+  }
+
+  .my-on-hover-scale {
+    @apply my-animate hover:scale-[1.025];
+  }
+  .my-on-hover-opacity {
+    @apply my-animate hover:opacity-70;
+  }
+  .my-on-hover-shadow {
+    @apply my-animate hover:shadow-xl;
+  }
+
+  .my-border-color {
+    @apply border-white;
+  }
+
+  .my-element-color {
+    @apply bg-gray-800;
+  }
+
+  .my-btn {
+    @apply rounded-3xl bg-gray-600 px-6 py-3 text-center font-semibold text-white hover:bg-gray-500;
+  }
+
+  .my-icon {
+    @apply my-animate my-on-hover-opacity;
+  }
+
+  .my-header-footer-width {
+    @apply mx-auto max-w-screen-xl px-7;
+  }
+}

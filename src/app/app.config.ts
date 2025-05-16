@@ -10,6 +10,7 @@ import { routes } from "./app.routes";
 
 const routerOptions: ExtraOptions = {
   anchorScrolling: "enabled",
+  scrollPositionRestoration: "enabled",
 };
 
 export const appConfig: ApplicationConfig = {

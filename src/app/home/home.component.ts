@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { ContactComponent } from "../contact/contact.component";
+import { GlobalsService } from "../globals.service";
 
 @Component({
   selector: "app-home",
@@ -8,6 +9,8 @@ import { ContactComponent } from "../contact/contact.component";
   styleUrl: "./home.component.css",
 })
 export class HomeComponent {
+  constructor(public globals: GlobalsService) {}
+
   public projectItems = [
     {
       name: "Systolic",
@@ -43,7 +46,4 @@ export class HomeComponent {
       text: "I have been passionate about game development ever since I was young.",
     },
   ];
-
-  public emailAddress = "mauble@proton.me";
-  public githubUrl = "https://github.com/mauble";
 }

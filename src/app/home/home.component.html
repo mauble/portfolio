@@ -53,7 +53,7 @@
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
       @for (item of projectItems; track item) {
         <div class="mb-12 md:mb-0">
-          <a [href]="githubUrl + item.url">
+          <a [href]="globals.githubUrl + item.url">
             <img
               [src]="item.img"
               class="my-on-hover-scale mb-8 max-h-64 w-full rounded-3xl object-cover shadow-2xl"
@@ -69,7 +69,9 @@
               </div>
             }
           </div>
-          <a [href]="githubUrl + item.url" class="my-btn">View project</a>
+          <a [href]="globals.githubUrl + item.url" class="my-btn"
+            >View project</a
+          >
         </div>
       }
     </div>

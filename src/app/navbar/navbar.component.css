@@ -1,0 +1,6 @@
+.my-navbar-color {
+  @apply bg-black/[.2];
+}
+.my-navbar-text {
+  @apply my-on-hover-opacity text-white;
+}

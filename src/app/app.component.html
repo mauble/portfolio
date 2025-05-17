@@ -1,29 +1,24 @@
-<span class="my-app-bg-color"></span>
-<body class="my-body-margin">
+<body class="my-width">
   <app-navbar />
-  <div class="my-router-width">
-    <router-outlet />
-  </div>
+  <router-outlet />
   <footer>
-    <div class="my-header-footer-width">
-      <div
-        class="my-border-color border-t py-7 sm:flex sm:items-center sm:justify-between"
-      >
-        <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
-          <li class="text-sm">Thanks for visiting 👋</li>
-        </ul>
-        <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
-          <a
-            [href]="'mailto:' + globals.emailAddress"
-            class="my-hover-opacity my-animate"
-          >
-            <fa-icon [icon]="globals.faEnvelope" size="xl" />
-          </a>
-          <a [href]="globals.githubUrl" class="my-hover-opacity my-animate">
-            <fa-icon [icon]="globals.faGithub" size="xl" />
-          </a>
-        </ul>
-      </div>
+    <div
+      class="my-border-color border-t py-7 sm:flex sm:items-center sm:justify-between"
+    >
+      <li class="text-md flex flex-wrap justify-center gap-4 lg:justify-end">
+        Thanks for visiting 👋
+      </li>
+      <ul class="mt-7 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+        <a
+          [href]="'mailto:' + globals.emailAddress"
+          class="my-hover-opacity my-animate"
+        >
+          <fa-icon [icon]="globals.faEnvelope" size="xl" />
+        </a>
+        <a [href]="globals.githubUrl" class="my-hover-opacity my-animate">
+          <fa-icon [icon]="globals.faGithub" size="xl" />
+        </a>
+      </ul>
     </div>
   </footer>
 </body>

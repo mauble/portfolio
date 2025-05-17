@@ -3,7 +3,3 @@
 .my-navbar-color {
   @apply bg-black/[.2];
 }
-
-.my-navbar-text {
-  @apply text-white;
-}

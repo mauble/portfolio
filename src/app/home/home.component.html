@@ -1,6 +1,7 @@
-<section>
-  <div class="mx-auto max-w-xl">
-    <!-- <p class="absolute font-mono text-xl">
+<div class="my-space-y">
+  <section>
+    <div class="mx-auto max-w-xl">
+      <!-- <p class="absolute font-mono text-xl">
       >
       <glitched-writer
         :text="[
@@ -17,67 +18,70 @@
           }"
       />
     </p> -->
-    <h2 class="my-14 text-3xl font-bold">Hi, I'm mauble 🤝</h2>
-    <p class="mb-4">Welcome to my personal website.</p>
-    <p class="mb-4">
-      I am a software developer from Germany who greatly enjoys coding and
-      tinkering with electronics.
-    </p>
-    <p class="mb-4">
-      My specialities are infrastructure, backend and web development.
-    </p>
-    <p class="mb-4">
-      When I am not coding, I enjoy listening to music, playing some guitar,
-      freshening up my language skills or playing some video games 😄
-    </p>
-  </div>
-</section>
-
-<section id="what-i-do">
-  <div class="flex flex-col items-stretch">
-    <h2 class="mb-24 text-center text-3xl font-bold">What I do.</h2>
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      @for (item of skillItems; track item) {
-        <div class="my-element-color my-hover-scale my-animate rounded-3xl p-8">
-          <h5 class="mb-3 text-xl font-bold">{{ item.name }}</h5>
-          <p class="flex-col">{{ item.text }}</p>
-        </div>
-      }
+      <h2 class="mb-14 text-end text-3xl font-bold">~ Hi, I'm mauble 🤝</h2>
+      <p class="mb-4">Welcome to my personal website.</p>
+      <p class="mb-4">
+        I am a software developer from Germany who greatly enjoys coding and
+        tinkering with electronics.
+      </p>
+      <p class="mb-4">
+        My specialities are infrastructure, backend and web development.
+      </p>
+      <p class="mb-4">
+        When I am not coding, I enjoy listening to music, playing some guitar,
+        freshening up my language skills or playing some video games.
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="projects">
-  <div class="flex flex-col items-stretch">
-    <h2 class="mb-24 text-center text-3xl font-bold">Featured projects.</h2>
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      @for (item of projectItems; track item) {
-        <div class="mb-12 md:mb-0">
-          <a [href]="globals.githubUrl + item.url">
-            <img
-              [src]="item.img"
-              class="my-hover-scale my-animate mb-8 max-h-64 w-full rounded-3xl object-cover shadow-2xl"
-          /></a>
-          <h5 class="mb-3 text-xl font-bold">{{ item.name }}</h5>
-          <p class="flex-col">{{ item.text }}</p>
-          <div class="mt-8 mb-6 flex flex-wrap gap-2">
-            @for (tag of item.tags; track tag) {
-              <div
-                class="my-element-color rounded-3xl p-2 text-sm font-semibold uppercase"
-              >
-                <p>{{ tag }}</p>
-              </div>
-            }
-          </div>
-          <a [href]="globals.githubUrl + item.url" class="my-btn"
-            >View project</a
+  <section id="what-i-do">
+    <div class="flex flex-col items-stretch">
+      <h2 class="mb-24 text-center text-3xl font-bold">What I do.</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        @for (item of skillItems; track item) {
+          <div
+            class="my-element-color my-hover-scale my-animate rounded-3xl p-8"
           >
-        </div>
-      }
+            <h5 class="mb-3 text-xl font-bold">{{ item.name }}</h5>
+            <p class="flex-col">{{ item.text }}</p>
+          </div>
+        }
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <app-contact />
-</section>
+  <section id="projects">
+    <div class="flex flex-col items-stretch">
+      <h2 class="mb-24 text-center text-3xl font-bold">Featured projects.</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        @for (item of projectItems; track item) {
+          <div class="mb-12 md:mb-0">
+            <a [href]="globals.githubUrl + item.url">
+              <img
+                [src]="item.img"
+                class="my-hover-scale my-animate mb-8 max-h-64 w-full rounded-3xl object-cover shadow-2xl"
+            /></a>
+            <h5 class="mb-3 text-xl font-bold">{{ item.name }}</h5>
+            <p class="flex-col">{{ item.text }}</p>
+            <div class="my-6 flex flex-wrap gap-2">
+              @for (tag of item.tags; track tag) {
+                <div
+                  class="my-element-color rounded-3xl p-2 text-sm font-semibold uppercase"
+                >
+                  <p>{{ tag }}</p>
+                </div>
+              }
+            </div>
+            <a [href]="globals.githubUrl + item.url" class="my-btn"
+              >View project</a
+            >
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <app-contact />
+  </section>
+</div>

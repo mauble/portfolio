@@ -1,48 +1,46 @@
 <header
   class="my-navbar-color fixed top-0 right-0 left-0 z-50 backdrop-blur-md"
 >
-  <div class="my-header-footer-width">
-    <div class="flex h-16 items-center justify-between">
-      <a class="my-navbar-text block text-xl" [routerLink]="'/'">✨ mauble</a>
-      <div class="md:flex md:gap-2">
-        <nav class="hidden md:block">
-          <ul class="flex items-center gap-6">
-            @for (item of navbarItems; track item) {
-              <li>
-                <a
-                  class="my-navbar-text my-hover-opacity my-animate"
-                  [routerLink]="item.path"
-                  [fragment]="item.hash"
-                  >{{ item.name }}</a
-                >
-              </li>
-            }
-          </ul>
-        </nav>
-        <div class="flex items-center gap-4">
-          <div class="block md:hidden">
-            <button
-              class="my-element-color my-hover-opacity my-animate h-8 w-8 rounded-xl"
-              (click)="toggleDropdown()"
-            >
-              <fa-icon [icon]="globals.faBars" size="lg" />
-            </button>
-          </div>
+  <div class="my-width flex h-16 items-center justify-between">
+    <a class="block text-xl" [routerLink]="'/'">✨ mauble</a>
+    <div class="md:flex md:gap-2">
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-6">
+          @for (item of navbarItems; track item) {
+            <li>
+              <a
+                class="my-hover-opacity my-animate"
+                [routerLink]="item.path"
+                [fragment]="item.hash"
+                >{{ item.name }}</a
+              >
+            </li>
+          }
+        </ul>
+      </nav>
+      <div class="flex items-center gap-4">
+        <div class="block md:hidden">
+          <button
+            class="my-element-color my-hover-opacity my-animate h-8 w-8 rounded-xl"
+            (click)="toggleDropdown()"
+          >
+            <fa-icon [icon]="globals.faBars" size="lg" />
+          </button>
         </div>
       </div>
     </div>
-    @if (isDropdownActive()) {
-      <div class="mb-6 space-y-2 md:hidden">
-        @for (item of navbarItems; track item) {
-          <a
-            class="my-navbar-text my-hover-opacity my-animate block text-center"
-            [routerLink]="item.path"
-            [fragment]="item.hash"
-          >
-            {{ item.name }}
-          </a>
-        }
-      </div>
-    }
   </div>
+  @if (isDropdownActive()) {
+    <div class="mb-8 space-y-3 md:hidden">
+      @for (item of navbarItems; track item) {
+        <a
+          class="my-hover-opacity my-animate block text-center"
+          [routerLink]="item.path"
+          [fragment]="item.hash"
+        >
+          {{ item.name }}
+        </a>
+      }
+    </div>
+  }
 </header>

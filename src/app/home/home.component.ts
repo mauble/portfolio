@@ -21,7 +21,7 @@ export class HomeComponent {
     },
     {
       name: "Portfolio website",
-      text: "My personal portfolio website that you are currently viewing. Built using Vue and Tailwind CSS.",
+      text: "My personal portfolio website that you are currently viewing. Built using Angular and Tailwind CSS.",
       url: "/mauble.github.io",
       img: "https://cdn.pixabay.com/photo/2021/03/18/19/56/keyboard-6105750_1280.jpg",
       tags: ["WEB DEVELOPMENT", "REST", "UI / UX"],

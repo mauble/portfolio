@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 import { ContactComponent } from "../contact/contact.component";
+import { NgxTypewriterComponent } from "@omnedia/ngx-typewriter";
 import { GlobalsService } from "../globals.service";
 
 @Component({
   selector: "app-home",
-  imports: [ContactComponent],
+  imports: [ContactComponent, NgxTypewriterComponent],
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.css",
 })

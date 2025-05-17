@@ -15,10 +15,13 @@
 @layer base {
   html {
     @apply text-white text-shadow-lg/30;
+
     animation: BackgroundGradient 25s ease-in-out infinite;
     background: linear-gradient(170deg, #6b2b00, #030053, #000000);
     background-size: 500% 200%;
     z-index: -1;
+
+    scroll-behavior: smooth;
   }
 }
 

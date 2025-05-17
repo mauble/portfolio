@@ -24,7 +24,7 @@
 
 @layer components {
   .my-width {
-    @apply mx-auto max-w-5xl px-9;
+    @apply mx-auto max-w-5xl px-10;
   }
 
   .my-animate {

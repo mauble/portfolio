@@ -50,11 +50,15 @@
     @apply border-white;
   }
 
-  .my-element-color {
+  .my-element-primary {
     @apply bg-gray-800;
   }
 
+  .my-element-secondary {
+    @apply bg-gray-500;
+  }
+
   .my-btn {
-    @apply rounded-3xl bg-gray-600 px-6 py-3 text-center font-semibold text-white hover:bg-gray-500;
+    @apply rounded-3xl bg-gray-700 px-6 py-3 text-center font-semibold text-white hover:bg-gray-500;
   }
 }

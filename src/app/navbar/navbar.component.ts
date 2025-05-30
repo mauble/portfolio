@@ -10,7 +10,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
   styleUrl: "./navbar.component.css",
 })
 export class NavbarComponent {
-  constructor(public globals: GlobalsService) {}
+  constructor(public readonly globals: GlobalsService) {}
 
   public navbarItems = [
     { name: "About me", path: "/" },

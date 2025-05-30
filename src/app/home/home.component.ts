@@ -10,7 +10,7 @@ import { GlobalsService } from "../globals.service";
   styleUrl: "./home.component.css",
 })
 export class HomeComponent {
-  constructor(public globals: GlobalsService) {}
+  constructor(public readonly globals: GlobalsService) {}
 
   public projectItems = [
     {

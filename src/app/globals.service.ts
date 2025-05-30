@@ -6,8 +6,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
   providedIn: "root",
 })
 export class GlobalsService {
-  public emailAddress = "mauble@proton.me";
+  public currentYear = new Date().getFullYear();
   public githubUrl = "https://github.com/mauble";
+  public emailAddress = "mauble@proton.me";
 
   faBars = faBars;
   faEnvelope = faEnvelope;

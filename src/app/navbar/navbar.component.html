@@ -30,7 +30,10 @@
       </div>
     </div>
   </div>
-  @if (isDropdownActive()) {
+  <div
+    [class.my-dropdown--open]="isDropdownActive()"
+    [class.my-dropdown--closed]="!isDropdownActive()"
+  >
     <div class="mb-8 space-y-3 md:hidden">
       @for (item of navbarItems; track item) {
         <a
@@ -42,5 +45,5 @@
         </a>
       }
     </div>
-  }
+  </div>
 </header>

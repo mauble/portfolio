@@ -6,13 +6,12 @@
       class="my-border-color border-t py-7 sm:flex sm:items-center sm:justify-between"
     >
       <li class="text-md flex flex-wrap justify-center gap-4 lg:justify-end">
-        <span>
-          <span>Thanks for visiting 👋</span>
-        </span>
-        <span class="text-gray-400">
+        <span>Thanks for visiting 👋</span>
+        <span class="my-auto text-sm text-gray-400 md:ml-3">
           © {{ globals.currentYear }} mauble. All rights reserved.
         </span>
       </li>
+
       <ul class="mt-7 flex justify-center gap-6 sm:mt-0 lg:justify-end">
         <a
           [href]="'mailto:' + globals.emailAddress"

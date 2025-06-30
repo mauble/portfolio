@@ -1,6 +1,6 @@
 import { Component, signal } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { GlobalsService } from "../globals.service";
+import { GlobalsService } from "../../globals.service";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @Component({

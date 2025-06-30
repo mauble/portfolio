@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ContactComponent } from "../contact/contact.component";
+import { ContactComponent } from "../components/contact/contact.component";
 import { NgxTypewriterComponent } from "@omnedia/ngx-typewriter";
 import { GlobalsService } from "../globals.service";
 

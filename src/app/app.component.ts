@@ -1,21 +1,17 @@
 import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
 import { ViewportScroller } from "@angular/common";
-import { RouterOutlet, RouterModule } from "@angular/router";
 import { NavbarComponent } from "./components/navbar/navbar.component";
-import { GlobalsService } from "./globals.service";
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: "app-root",
-  imports: [RouterOutlet, RouterModule, NavbarComponent, FontAwesomeModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })
 export class AppComponent {
-  constructor(
-    public globals: GlobalsService,
-    viewport: ViewportScroller,
-  ) {
+  constructor(viewport: ViewportScroller) {
     viewport.setOffset([0, 150]);
   }
 }

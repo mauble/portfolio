@@ -1,31 +1,5 @@
 <body class="my-width">
   <app-navbar />
-  <router-outlet />
-  <footer>
-    <div
-      class="my-border-color border-t py-7 sm:flex sm:items-center sm:justify-between"
-    >
-      <div class="flex flex-col items-center sm:items-start">
-        <span class="text-md">Thanks for visiting 👋</span>
-        <span class="my-auto mt-2 text-xs text-gray-400">
-          © {{ globals.currentYear }} mauble. All rights reserved.
-        </span>
-      </div>
-
-      <ul class="mt-5 flex justify-center gap-6 sm:mt-0 lg:justify-end">
-        <a class="my-hover-opacity my-animate" [routerLink]="'/legal-notice'"
-          >Legal Notice</a
-        >
-        <a
-          [href]="'mailto:' + globals.emailAddress"
-          class="my-hover-opacity my-animate"
-        >
-          <fa-icon [icon]="globals.faEnvelope" size="xl" />
-        </a>
-        <a [href]="globals.githubUrl" class="my-hover-opacity my-animate">
-          <fa-icon [icon]="globals.faGithub" size="xl" />
-        </a>
-      </ul>
-    </div>
-  </footer>
+    <router-outlet />
+  <app-footer />
 </body>

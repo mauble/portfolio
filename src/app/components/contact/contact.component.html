@@ -1,31 +1,59 @@
 <div class="grid grid-cols-1 md:grid-cols-2">
-  <div class="my-auto pb-10 text-center">
+  <div class="my-auto pb-16 text-center md:pb-10 md:text-start">
     <h2 class="text-dark mb-10 text-3xl font-bold">Contact.</h2>
     <p>Do you have questions or want to send a request?</p>
-    <p>Just send me a quick e-mail 🙌</p>
+    <p>
+      Just send me a quick
+      <a
+        class="my-hover-opacity my-animate underline"
+        [href]="'mailto:' + globals.emailAddress"
+        >e-mail</a
+      >
+      or use this handy form here 🙌
+    </p>
   </div>
-  <form class="my-contact-text-color mx-auto">
-    <div class="mb-3">
-      <input
-        type="text"
-        placeholder="Your name"
-        class="rounded-3xl bg-white p-3 outline-none"
-      />
-    </div>
-    <div class="mb-6">
-      <input
-        type="email"
-        placeholder="Your e-mail"
-        class="rounded-3xl bg-white p-3 outline-none"
-      />
-    </div>
-    <div class="mb-6">
-      <textarea
-        rows="6"
-        placeholder="Your message"
-        class="resize-none rounded-3xl bg-white p-3 outline-none"
-      ></textarea>
-    </div>
-    <button type="submit" class="my-btn mx-auto">Send Message</button>
-  </form>
+  <div class="flex items-center justify-center md:justify-end">
+    <form
+      #contactForm="ngForm"
+      (ngSubmit)="onSubmit(contactForm)"
+      class="mx-0 w-full max-w-sm text-gray-800 placeholder-gray-400 md:mx-0"
+      autocomplete="off"
+    >
+      <div class="mb-4">
+        <textarea
+          name="email"
+          [(ngModel)]="form.email"
+          required
+          rows="1"
+          placeholder="Your e-mail address"
+          class="w-full resize-none rounded-3xl bg-white p-3"
+        ></textarea>
+      </div>
+      <div class="mb-4">
+        <textarea
+          name="title"
+          [(ngModel)]="form.title"
+          required
+          rows="1"
+          placeholder="Your title"
+          class="w-full resize-none rounded-3xl bg-white p-3"
+        ></textarea>
+      </div>
+      <div class="mb-4">
+        <textarea
+          name="message"
+          [(ngModel)]="form.message"
+          required
+          rows="6"
+          placeholder="Your message"
+          class="w-full resize-none rounded-3xl bg-white p-3"
+        ></textarea>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <button type="submit" [disabled]="!contactForm.valid" class="my-btn">
+          Off it goes!
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

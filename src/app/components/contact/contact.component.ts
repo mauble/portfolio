@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { GlobalsService } from "../../globals.service";
 import { FormsModule, NgForm } from "@angular/forms";
+import { GlobalsService } from "../../services/globals/globals.service";
 
 @Component({
   selector: "app-contact",

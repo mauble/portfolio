@@ -1,7 +1,7 @@
 import { Component, signal } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { GlobalsService } from "../../globals.service";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { GlobalsService } from "../../services/globals/globals.service";
 
 @Component({
   selector: "app-navbar",

@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import { ContactComponent } from "../components/contact/contact.component";
 import { NgxTypewriterComponent } from "@omnedia/ngx-typewriter";
-import { GlobalsService } from "../globals.service";
+import { ContactComponent } from "../../components/contact/contact.component";
+import { GlobalsService } from "../../globals.service";
 
 @Component({
   selector: "app-home",

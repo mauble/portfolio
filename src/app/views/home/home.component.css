@@ -1,4 +1,4 @@
-@reference "../../styles.css";
+@reference "../../../styles.css";
 
 @media (max-width: 1000px) {
   .my-space-y {

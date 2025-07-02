@@ -1,7 +1,7 @@
 import { Routes } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
-import { LegalNoticeComponent } from "./legal-notice/legal-notice.component";
-import { NotFoundComponent } from "./not-found/not-found.component";
+import { HomeComponent } from "./views/home/home.component";
+import { LegalNoticeComponent } from "./views/legal-notice/legal-notice.component";
+import { NotFoundComponent } from "./views/not-found/not-found.component";
 
 export const routes: Routes = [
   {

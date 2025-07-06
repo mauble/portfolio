@@ -24,6 +24,6 @@ public class MessageController {
     @PostMapping("/messages")
     void addMessage(@RequestBody Message message) {
         messageRepository.save(message);
-        System.out.println(String.valueOf(message));
+        System.out.println(message);
     }
 }

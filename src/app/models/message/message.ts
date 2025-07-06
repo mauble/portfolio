@@ -1,6 +1,6 @@
 export class Message {
-  id?: string;
-  name?: string;
-  email?: string;
-  message?: string;
+  id!: string;
+  email!: string;
+  title!: string;
+  message!: string;
 }

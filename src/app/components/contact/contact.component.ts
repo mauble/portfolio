@@ -22,7 +22,10 @@ export class ContactComponent {
   }
 
   isFormValid(contactForm: NgForm): boolean {
-    return this.isEmailValid(this.msg.email) && contactForm.valid!;
+    if (contactForm.valid !== null) {
+      return this.isEmailValid(this.msg.email) && contactForm.valid;
+    }
+    return false;
   }
 
   defaultMsg(): Message {
@@ -48,9 +51,11 @@ export class ContactComponent {
         },
       });
     } else if (!contactForm.valid) {
-      alert("Please fill out all required fields.");
+      alert("Please fill out all fields.");
     } else if (!this.isEmailValid(this.msg.email)) {
-      alert("Please enter a valid email address.");
+      alert("Please enter a valid e-mail address.");
+    } else {
+      alert("Form is invalid. Please check your inputs.");
     }
   }
 }

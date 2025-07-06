@@ -8,7 +8,7 @@ import { Message } from "../../models/message/message";
 export class MessageService {
   constructor(private http: HttpClient) {}
 
-  private apiUrl = "http://localhost:8080/users";
+  private apiUrl = "http://localhost:8080/api/messages";
 
   public save(message: Message) {
     return this.http.post<Message>(this.apiUrl, message);

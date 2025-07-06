@@ -27,7 +27,6 @@ export class ContactComponent {
 
   defaultMsg(): Message {
     return {
-      id: crypto.randomUUID(),
       email: "",
       title: "",
       message: "",
@@ -42,7 +41,7 @@ export class ContactComponent {
         next: () => {
           alert(
             "Message sent!\n" +
-              `ID: ${this.msg.id}\nE-Mail: ${this.msg.email}\nTitle: ${this.msg.title}\nMessage: ${this.msg.message}`,
+              `E-Mail: ${this.msg.email}\nTitle: ${this.msg.title}\nMessage: ${this.msg.message}`,
           );
           contactForm.resetForm();
           this.msg = this.defaultMsg();

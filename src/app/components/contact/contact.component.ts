@@ -42,6 +42,8 @@ export class ContactComponent {
           alert("Failed to send message.");
         },
       });
+    } else {
+      alert("Please fill out all required fields.");
     }
   }
 }

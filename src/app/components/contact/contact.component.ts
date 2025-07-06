@@ -16,6 +16,15 @@ export class ContactComponent {
     private messageService: MessageService,
   ) {}
 
+  isEmailValid(email: string): boolean {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+
+  isFormValid(contactForm: NgForm): boolean {
+    return this.isEmailValid(this.msg.email) && contactForm.valid!;
+  }
+
   defaultMsg(): Message {
     return {
       id: crypto.randomUUID(),
@@ -28,7 +37,7 @@ export class ContactComponent {
   msg: Message = this.defaultMsg();
 
   onSubmit(contactForm: NgForm) {
-    if (contactForm.valid) {
+    if (this.isFormValid(contactForm)) {
       this.messageService.save(this.msg).subscribe({
         next: () => {
           alert(
@@ -42,8 +51,10 @@ export class ContactComponent {
           alert("Failed to send message.");
         },
       });
-    } else {
+    } else if (!contactForm.valid) {
       alert("Please fill out all required fields.");
+    } else if (!this.isEmailValid(this.msg.email)) {
+      alert("Please enter a valid email address.");
     }
   }
 }

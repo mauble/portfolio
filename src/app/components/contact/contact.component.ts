@@ -39,10 +39,7 @@ export class ContactComponent {
     if (this.isFormValid(contactForm)) {
       this.messageService.save(this.msg).subscribe({
         next: () => {
-          alert(
-            "Message sent!\n" +
-              `E-Mail: ${this.msg.email}\nTitle: ${this.msg.title}\nMessage: ${this.msg.message}`,
-          );
+          alert("Message sent!");
           contactForm.resetForm();
           this.msg = this.defaultMsg();
         },

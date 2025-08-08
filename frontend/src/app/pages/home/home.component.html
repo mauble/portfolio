@@ -1,0 +1,109 @@
+<div class="my-space-y">
+  <section>
+    <div class="mx-auto max-w-xl">
+      <div class="mb-3 ml-auto flex max-w-fit items-center font-mono text-xl">
+        <om-typewriter
+          [words]="[
+            'Web developer',
+            'Linux enthusiast',
+            'Hardware tinkerer',
+            'Open source advocate',
+            'App developer',
+            'Language lover',
+            'Hobby gamer',
+          ]"
+          [deleteDelay]="1000"
+          styleClass=""
+        />
+        <span class="text-primary mx-4 font-bold">~</span>
+      </div>
+      <h2 class="mb-8 text-end text-3xl font-bold">Hi, I'm mauble 👋</h2>
+      <p class="mb-4">Welcome to my personal website.</p>
+      <p class="mb-4">
+        I am a young and ambitious software developer from Germany.
+      </p>
+      <p class="mb-4">
+        My speciality is web development, primarily utilizing the Angular
+        framework and TypeScript in the frontend, as well as .NET and C# for
+        backend development.
+      </p>
+      <p class="mb-4">
+        Furthermore, I also enjoy low-level programming using Rust and C, and I
+        am experienced with database management using SQL, as well as building
+        APIs using GraphQL.
+      </p>
+      <p class="mb-4">
+        I am currently enrolled in a dual studies programme, taking Applied
+        Computer Science and Software Engineering, and learning more about my
+        field everyday.
+      </p>
+      <p class="mb-4">
+        I am working as a full-stack software developer at an industrial company
+        with global presence, where I am responsible for developing and
+        maintaining web applications for customers.
+      </p>
+      <p class="mb-4">
+        In my free time, I like to work on personal projects, contribute to
+        open-source software, and explore new technologies. I am always looking
+        for new challenges and opportunities to grow as a developer.
+      </p>
+      <p class="mb-4">
+        I enjoy listening to music, watching movies and reading, playing the
+        guitar, drawing and sketching, freshening up my language skills and
+        having a good gaming session once in a while 😄
+      </p>
+    </div>
+  </section>
+
+  <section id="what-i-do">
+    <div class="flex flex-col items-stretch">
+      <h2 class="mb-24 text-center text-3xl font-bold">What I do.</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        @for (item of skillItems; track item) {
+          <div
+            class="my-element-primary my-hover-shadow my-animate rounded-3xl p-8"
+          >
+            <h5 class="mb-3 text-xl font-bold">{{ item.name }}</h5>
+            <p class="flex-col">{{ item.text }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="flex flex-col items-stretch">
+      <h2 class="mb-24 text-center text-3xl font-bold">Featured projects.</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        @for (item of projectItems; track item) {
+          <div class="mb-12 md:mb-0">
+            <a [href]="globals.githubUrl + item.url">
+              <img
+                [src]="item.img"
+                [alt]="item.name"
+                class="my-hover-scale my-animate mb-8 max-h-64 w-full rounded-3xl object-cover shadow-2xl"
+            /></a>
+            <h5 class="mb-3 text-xl font-bold">{{ item.name }}</h5>
+            <p class="flex-col">{{ item.text }}</p>
+            <div class="my-6 flex flex-wrap gap-2">
+              @for (tag of item.tags; track tag) {
+                <div
+                  class="my-element-secondary rounded-3xl p-2 text-sm font-semibold uppercase"
+                >
+                  <p>{{ tag }}</p>
+                </div>
+              }
+            </div>
+            <a [href]="globals.githubUrl + item.url" class="my-btn"
+              >View project</a
+            >
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <app-contact />
+  </section>
+</div>

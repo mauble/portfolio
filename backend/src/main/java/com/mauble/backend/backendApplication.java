@@ -1,7 +1,7 @@
-package com.mauble.portfoliobackend;
+package com.mauble.backend;
 
-import com.mauble.portfoliobackend.entities.Message;
-import com.mauble.portfoliobackend.repositories.IMessageRepository;
+import com.mauble.backend.entities.Message;
+import com.mauble.backend.repositories.IMessageRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean;
 import java.util.stream.Stream;
 
 @SpringBootApplication
-public class PortfolioBackendApplication {
+public class backendApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PortfolioBackendApplication.class, args);
+		SpringApplication.run(backendApplication.class, args);
 	}
 
 	@Bean

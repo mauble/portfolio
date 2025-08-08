@@ -1,6 +1,6 @@
-package com.mauble.portfoliobackend.repositories;
+package com.mauble.backend.repositories;
 
-import com.mauble.portfoliobackend.entities.Message;
+import com.mauble.backend.entities.Message;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.repository.CrudRepository;
 

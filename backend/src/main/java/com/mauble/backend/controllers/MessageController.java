@@ -1,7 +1,7 @@
-package com.mauble.portfoliobackend.controllers;
+package com.mauble.backend.controllers;
 
-import com.mauble.portfoliobackend.entities.Message;
-import com.mauble.portfoliobackend.repositories.IMessageRepository;
+import com.mauble.backend.entities.Message;
+import com.mauble.backend.repositories.IMessageRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

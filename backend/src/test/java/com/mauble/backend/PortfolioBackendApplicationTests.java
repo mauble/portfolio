@@ -1,10 +1,10 @@
-package com.mauble.portfoliobackend;
+package com.mauble.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PortfolioBackendApplicationTests {
+class backendApplicationTests {
 
 	@Test
 	void contextLoads() {

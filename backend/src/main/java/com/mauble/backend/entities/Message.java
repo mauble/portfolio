@@ -1,4 +1,4 @@
-package com.mauble.portfoliobackend.entities;
+package com.mauble.backend.entities;
 
 import jakarta.persistence.*;
 

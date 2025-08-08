@@ -1,5 +1,5 @@
 {
-  "name": "mauble.github.io",
+  "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,6 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "npm run build && gh-pages -d dist/mauble.github.io/browser",
     "lint": "ng lint"
   },
   "private": true,
@@ -37,7 +36,6 @@
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.6.0",
     "eslint": "^9.27.0",
-    "gh-pages": "^6.3.0",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

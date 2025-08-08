@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean;
 import java.util.stream.Stream;
 
 @SpringBootApplication
-public class backendApplication {
+public class BackendApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(backendApplication.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
 
 	@Bean

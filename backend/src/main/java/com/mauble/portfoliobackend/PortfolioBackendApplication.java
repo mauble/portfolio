@@ -17,7 +17,7 @@ public class PortfolioBackendApplication {
 
 	@Bean
 	CommandLineRunner init(IMessageRepository messageRepository) {
-		return args -> {
+		return _ -> {
 			Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(title -> {
 			Message message = new Message(title.toLowerCase() + "@domain.com", title, "test");
 				messageRepository.save(message);

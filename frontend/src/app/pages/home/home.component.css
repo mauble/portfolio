@@ -2,12 +2,12 @@
 
 @media (max-width: 1000px) {
   .my-space-y {
-    @apply mt-40 mb-30 space-y-25;
+    @apply mt-35 mb-30 space-y-25;
   }
 }
 
 @media (min-width: 1000px) {
   .my-space-y {
-    @apply mt-50 mb-40 space-y-50;
+    @apply mt-45 mb-40 space-y-35;
   }
 }
